@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C92189B8165C290800551523 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92189B7165C290800551523 /* UIKit.framework */; };
+		C92189BA165C290800551523 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92189B9165C290800551523 /* Foundation.framework */; };
+		C92189BC165C290800551523 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92189BB165C290800551523 /* CoreGraphics.framework */; };
+		C92189C2165C290800551523 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C92189C0165C290800551523 /* InfoPlist.strings */; };
+		C92189C4165C290800551523 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C92189C3165C290800551523 /* main.m */; };
+		C92189C8165C290800551523 /* MeetingNotesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C92189C7165C290800551523 /* MeetingNotesAppDelegate.m */; };
+		C92189CA165C290800551523 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C92189C9165C290800551523 /* Default.png */; };
+		C92189CC165C290800551523 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C92189CB165C290800551523 /* Default@2x.png */; };
+		C92189CE165C290800551523 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C92189CD165C290800551523 /* Default-568h@2x.png */; };
+		C92189D1165C290800551523 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C92189CF165C290800551523 /* MainStoryboard.storyboard */; };
+		C92189D4165C290800551523 /* MeetingNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C92189D3165C290800551523 /* MeetingNotesViewController.m */; };
+		C92189DC165C290900551523 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92189DB165C290900551523 /* SenTestingKit.framework */; };
+		C92189DD165C290900551523 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92189B7165C290800551523 /* UIKit.framework */; };
+		C92189DE165C290900551523 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92189B9165C290800551523 /* Foundation.framework */; };
+		C92189E6165C290900551523 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C92189E4165C290900551523 /* InfoPlist.strings */; };
+		C92189E9165C290900551523 /* MeetingNotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C92189E8165C290900551523 /* MeetingNotesTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C92189DF165C290900551523 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C92189AA165C290800551523 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C92189B2165C290800551523;
+			remoteInfo = MeetingNotes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C92189B3165C290800551523 /* MeetingNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetingNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C92189B7165C290800551523 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C92189B9165C290800551523 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C92189BB165C290800551523 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C92189BF165C290800551523 /* MeetingNotes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MeetingNotes-Info.plist"; sourceTree = "<group>"; };
+		C92189C1165C290800551523 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C92189C3165C290800551523 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C92189C5165C290800551523 /* MeetingNotes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MeetingNotes-Prefix.pch"; sourceTree = "<group>"; };
+		C92189C6165C290800551523 /* MeetingNotesAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetingNotesAppDelegate.h; sourceTree = "<group>"; };
+		C92189C7165C290800551523 /* MeetingNotesAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetingNotesAppDelegate.m; sourceTree = "<group>"; };
+		C92189C9165C290800551523 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C92189CB165C290800551523 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C92189CD165C290800551523 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C92189D0165C290800551523 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		C92189D2165C290800551523 /* MeetingNotesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetingNotesViewController.h; sourceTree = "<group>"; };
+		C92189D3165C290800551523 /* MeetingNotesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetingNotesViewController.m; sourceTree = "<group>"; };
+		C92189DA165C290900551523 /* MeetingNotesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetingNotesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C92189DB165C290900551523 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C92189E3165C290900551523 /* MeetingNotesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MeetingNotesTests-Info.plist"; sourceTree = "<group>"; };
+		C92189E5165C290900551523 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C92189E7165C290900551523 /* MeetingNotesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetingNotesTests.h; sourceTree = "<group>"; };
+		C92189E8165C290900551523 /* MeetingNotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetingNotesTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C92189B0165C290800551523 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C92189B8165C290800551523 /* UIKit.framework in Frameworks */,
+				C92189BA165C290800551523 /* Foundation.framework in Frameworks */,
+				C92189BC165C290800551523 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C92189D6165C290900551523 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C92189DC165C290900551523 /* SenTestingKit.framework in Frameworks */,
+				C92189DD165C290900551523 /* UIKit.framework in Frameworks */,
+				C92189DE165C290900551523 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C92189A8165C290800551523 = {
+			isa = PBXGroup;
+			children = (
+				C92189BD165C290800551523 /* MeetingNotes */,
+				C92189E1165C290900551523 /* MeetingNotesTests */,
+				C92189B6165C290800551523 /* Frameworks */,
+				C92189B4165C290800551523 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C92189B4165C290800551523 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C92189B3165C290800551523 /* MeetingNotes.app */,
+				C92189DA165C290900551523 /* MeetingNotesTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C92189B6165C290800551523 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C92189B7165C290800551523 /* UIKit.framework */,
+				C92189B9165C290800551523 /* Foundation.framework */,
+				C92189BB165C290800551523 /* CoreGraphics.framework */,
+				C92189DB165C290900551523 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C92189BD165C290800551523 /* MeetingNotes */ = {
+			isa = PBXGroup;
+			children = (
+				C92189C6165C290800551523 /* MeetingNotesAppDelegate.h */,
+				C92189C7165C290800551523 /* MeetingNotesAppDelegate.m */,
+				C92189CF165C290800551523 /* MainStoryboard.storyboard */,
+				C92189D2165C290800551523 /* MeetingNotesViewController.h */,
+				C92189D3165C290800551523 /* MeetingNotesViewController.m */,
+				C92189BE165C290800551523 /* Supporting Files */,
+			);
+			path = MeetingNotes;
+			sourceTree = "<group>";
+		};
+		C92189BE165C290800551523 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C92189BF165C290800551523 /* MeetingNotes-Info.plist */,
+				C92189C0165C290800551523 /* InfoPlist.strings */,
+				C92189C3165C290800551523 /* main.m */,
+				C92189C5165C290800551523 /* MeetingNotes-Prefix.pch */,
+				C92189C9165C290800551523 /* Default.png */,
+				C92189CB165C290800551523 /* Default@2x.png */,
+				C92189CD165C290800551523 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C92189E1165C290900551523 /* MeetingNotesTests */ = {
+			isa = PBXGroup;
+			children = (
+				C92189E7165C290900551523 /* MeetingNotesTests.h */,
+				C92189E8165C290900551523 /* MeetingNotesTests.m */,
+				C92189E2165C290900551523 /* Supporting Files */,
+			);
+			path = MeetingNotesTests;
+			sourceTree = "<group>";
+		};
+		C92189E2165C290900551523 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C92189E3165C290900551523 /* MeetingNotesTests-Info.plist */,
+				C92189E4165C290900551523 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C92189B2165C290800551523 /* MeetingNotes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C92189EC165C290900551523 /* Build configuration list for PBXNativeTarget "MeetingNotes" */;
+			buildPhases = (
+				C92189AF165C290800551523 /* Sources */,
+				C92189B0165C290800551523 /* Frameworks */,
+				C92189B1165C290800551523 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeetingNotes;
+			productName = MeetingNotes;
+			productReference = C92189B3165C290800551523 /* MeetingNotes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C92189D9165C290900551523 /* MeetingNotesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C92189EF165C290900551523 /* Build configuration list for PBXNativeTarget "MeetingNotesTests" */;
+			buildPhases = (
+				C92189D5165C290900551523 /* Sources */,
+				C92189D6165C290900551523 /* Frameworks */,
+				C92189D7165C290900551523 /* Resources */,
+				C92189D8165C290900551523 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C92189E0165C290900551523 /* PBXTargetDependency */,
+			);
+			name = MeetingNotesTests;
+			productName = MeetingNotesTests;
+			productReference = C92189DA165C290900551523 /* MeetingNotesTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C92189AA165C290800551523 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MeetingNotes;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = matt;
+			};
+			buildConfigurationList = C92189AD165C290800551523 /* Build configuration list for PBXProject "MeetingNotes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C92189A8165C290800551523;
+			productRefGroup = C92189B4165C290800551523 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C92189B2165C290800551523 /* MeetingNotes */,
+				C92189D9165C290900551523 /* MeetingNotesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C92189B1165C290800551523 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C92189C2165C290800551523 /* InfoPlist.strings in Resources */,
+				C92189CA165C290800551523 /* Default.png in Resources */,
+				C92189CC165C290800551523 /* Default@2x.png in Resources */,
+				C92189CE165C290800551523 /* Default-568h@2x.png in Resources */,
+				C92189D1165C290800551523 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C92189D7165C290900551523 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C92189E6165C290900551523 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C92189D8165C290900551523 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C92189AF165C290800551523 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C92189C4165C290800551523 /* main.m in Sources */,
+				C92189C8165C290800551523 /* MeetingNotesAppDelegate.m in Sources */,
+				C92189D4165C290800551523 /* MeetingNotesViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C92189D5165C290900551523 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C92189E9165C290900551523 /* MeetingNotesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C92189E0165C290900551523 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C92189B2165C290800551523 /* MeetingNotes */;
+			targetProxy = C92189DF165C290900551523 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C92189C0165C290800551523 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C92189C1165C290800551523 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C92189CF165C290800551523 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C92189D0165C290800551523 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		C92189E4165C290900551523 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C92189E5165C290900551523 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C92189EA165C290900551523 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C92189EB165C290900551523 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C92189ED165C290900551523 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MeetingNotes/MeetingNotes-Prefix.pch";
+				INFOPLIST_FILE = "MeetingNotes/MeetingNotes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C92189EE165C290900551523 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MeetingNotes/MeetingNotes-Prefix.pch";
+				INFOPLIST_FILE = "MeetingNotes/MeetingNotes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C92189F0165C290900551523 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MeetingNotes.app/MeetingNotes";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MeetingNotes/MeetingNotes-Prefix.pch";
+				INFOPLIST_FILE = "MeetingNotesTests/MeetingNotesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C92189F1165C290900551523 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MeetingNotes.app/MeetingNotes";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MeetingNotes/MeetingNotes-Prefix.pch";
+				INFOPLIST_FILE = "MeetingNotesTests/MeetingNotesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C92189AD165C290800551523 /* Build configuration list for PBXProject "MeetingNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C92189EA165C290900551523 /* Debug */,
+				C92189EB165C290900551523 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C92189EC165C290900551523 /* Build configuration list for PBXNativeTarget "MeetingNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C92189ED165C290900551523 /* Debug */,
+				C92189EE165C290900551523 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C92189EF165C290900551523 /* Build configuration list for PBXNativeTarget "MeetingNotesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C92189F0165C290900551523 /* Debug */,
+				C92189F1165C290900551523 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C92189AA165C290800551523 /* Project object */;
+}
