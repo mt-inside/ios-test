@@ -1,26 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Meeting Notes View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="MeetingNotesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Me5-pn-hlA">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="kw4-Qv-5z6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGi-TC-fqp">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGW-HH-vQA">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="x9v-2u-NKN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Foo">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeGreeting:" destination="2" eventType="touchUpInside" id="mek-ct-Czf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Me5-pn-hlA" firstAttribute="top" secondItem="3" secondAttribute="top" constant="77" id="3E9-ne-hOs"/>
+                            <constraint firstItem="Me5-pn-hlA" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="K4Q-kU-a1x"/>
+                            <constraint firstItem="vGi-TC-fqp" firstAttribute="centerX" secondItem="Me5-pn-hlA" secondAttribute="centerX" type="default" id="OGI-Pi-gIp"/>
+                            <constraint firstItem="vGi-TC-fqp" firstAttribute="top" secondItem="3" secondAttribute="top" constant="201" id="TJa-5b-cvs"/>
+                            <constraint firstItem="tGW-HH-vQA" firstAttribute="centerX" secondItem="vGi-TC-fqp" secondAttribute="centerX" type="default" id="e9I-6Z-go4"/>
+                            <constraint firstAttribute="bottom" secondItem="tGW-HH-vQA" secondAttribute="bottom" constant="74" id="ykR-2P-PuP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelGreeting" destination="vGi-TC-fqp" id="FDL-Dl-Dfq"/>
+                        <outlet property="textName" destination="Me5-pn-hlA" id="m6p-Y4-RZZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="MeetingNotesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MeetingNotesViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changeGreeting:"/>
+                <relationship kind="outlet" name="labelGreeting" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textName" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
