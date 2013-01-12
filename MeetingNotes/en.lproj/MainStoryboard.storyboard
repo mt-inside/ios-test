@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZOz-Ex-Ugu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--Meeting Notes View Controller-->
+        <!--Meeting View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="MeetingNotesViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="MeetingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Me5-pn-hlA">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="kw4-Qv-5z6"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="oS2-Et-mdZ"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGi-TC-fqp">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -37,39 +37,96 @@
                                     <action selector="changeGreeting:" destination="2" eventType="touchUpInside" id="mek-ct-Czf"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1oE-iW-M8x">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="Lvp-bx-yAb"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuP-Qg-yet">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="ssa-My-w1s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="2" eventType="touchUpInside" id="510-UJ-Tdh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Me5-pn-hlA" firstAttribute="top" secondItem="3" secondAttribute="top" constant="77" id="3E9-ne-hOs"/>
-                            <constraint firstItem="Me5-pn-hlA" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="K4Q-kU-a1x"/>
-                            <constraint firstItem="vGi-TC-fqp" firstAttribute="centerX" secondItem="Me5-pn-hlA" secondAttribute="centerX" type="default" id="OGI-Pi-gIp"/>
-                            <constraint firstItem="vGi-TC-fqp" firstAttribute="top" secondItem="3" secondAttribute="top" constant="201" id="TJa-5b-cvs"/>
+                            <constraint firstItem="1oE-iW-M8x" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="2Ig-xD-Ori"/>
+                            <constraint firstItem="vGi-TC-fqp" firstAttribute="top" secondItem="3" secondAttribute="top" constant="201" id="4mY-bI-32X"/>
+                            <constraint firstItem="1oE-iW-M8x" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="C5c-sj-WY6"/>
+                            <constraint firstItem="zuP-Qg-yet" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="30" id="EGW-iX-PSA"/>
+                            <constraint firstItem="Me5-pn-hlA" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="a2e-My-Hhu"/>
+                            <constraint firstAttribute="bottom" secondItem="zuP-Qg-yet" secondAttribute="bottom" constant="148" id="cQH-Ml-Icx"/>
                             <constraint firstItem="tGW-HH-vQA" firstAttribute="centerX" secondItem="vGi-TC-fqp" secondAttribute="centerX" type="default" id="e9I-6Z-go4"/>
+                            <constraint firstItem="Me5-pn-hlA" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="gBb-VR-2so"/>
+                            <constraint firstItem="Me5-pn-hlA" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="hpB-dt-4Xg"/>
+                            <constraint firstItem="1oE-iW-M8x" firstAttribute="top" secondItem="3" secondAttribute="top" constant="28" id="xGG-3j-rZI"/>
                             <constraint firstAttribute="bottom" secondItem="tGW-HH-vQA" secondAttribute="bottom" constant="74" id="ykR-2P-PuP"/>
+                            <constraint firstItem="vGi-TC-fqp" firstAttribute="centerX" secondItem="1oE-iW-M8x" secondAttribute="centerX" type="default" id="yu7-Ys-BRn"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="GLW-06-Z04"/>
                     <connections>
                         <outlet property="labelGreeting" destination="vGi-TC-fqp" id="FDL-Dl-Dfq"/>
+                        <outlet property="textArea" destination="1oE-iW-M8x" id="ynY-an-YcL"/>
                         <outlet property="textName" destination="Me5-pn-hlA" id="m6p-Y4-RZZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="308" y="140"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="BLR-hN-3Wk">
+            <objects>
+                <viewController id="ZOz-Ex-Ugu" customClass="MainViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3ZO-VE-ono">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MF-gp-kjj">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="bHE-v1-eHY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Meeting">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2" kind="modal" modalTransitionStyle="coverVertical" id="2dg-wk-gCh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.41093900220000001" blue="0.6292997548" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9MF-gp-kjj" firstAttribute="leading" secondItem="3ZO-VE-ono" secondAttribute="leading" constant="131" id="4QN-RF-IW2"/>
+                            <constraint firstItem="9MF-gp-kjj" firstAttribute="top" secondItem="3ZO-VE-ono" secondAttribute="top" constant="163" id="e6T-Hb-f8U"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9oU-7X-wbQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-123" y="140"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="MeetingNotesViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MeetingNotesViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="changeGreeting:"/>
-                <relationship kind="outlet" name="labelGreeting" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textName" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

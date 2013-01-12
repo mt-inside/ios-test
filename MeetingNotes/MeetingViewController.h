@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MeetingNotesViewController : UIViewController
+@interface MeetingViewController : UIViewController <UITextFieldDelegate>
 - (IBAction)changeGreeting:(id)sender;
+- (IBAction)back:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *textName;
 @property (weak, nonatomic) IBOutlet UILabel *labelGreeting;
+@property (weak, nonatomic) IBOutlet UITextView *textArea;
+
+// This is the model. Currently only one string.
+// Point is that program state shouldn't be left in UI elements
+@property (copy, nonatomic) NSString *userName;
 
 @end
