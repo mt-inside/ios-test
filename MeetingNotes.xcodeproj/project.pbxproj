@@ -17,7 +17,6 @@
 		C92189CC165C290800551523 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C92189CB165C290800551523 /* Default@2x.png */; };
 		C92189CE165C290800551523 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C92189CD165C290800551523 /* Default-568h@2x.png */; };
 		C92189D1165C290800551523 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C92189CF165C290800551523 /* MainStoryboard.storyboard */; };
-		C92189D4165C290800551523 /* MeetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C92189D3165C290800551523 /* MeetingViewController.m */; };
 		C92189DC165C290900551523 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92189DB165C290900551523 /* SenTestingKit.framework */; };
 		C92189DD165C290900551523 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92189B7165C290800551523 /* UIKit.framework */; };
 		C92189DE165C290900551523 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92189B9165C290800551523 /* Foundation.framework */; };
@@ -27,6 +26,12 @@
 		C94F1B08168F74AB0068870E /* Meetings.m in Sources */ = {isa = PBXBuildFile; fileRef = C94F1B07168F74AB0068870E /* Meetings.m */; };
 		C94F1B0B168F79910068870E /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = C94F1B0A168F79910068870E /* Note.m */; };
 		C94F1B0E168FC0CE0068870E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94F1B0D168FC0CE0068870E /* MainViewController.m */; };
+		C9891ACA16A20ACA0006F9C3 /* useful.m in Sources */ = {isa = PBXBuildFile; fileRef = C9891AC916A20ACA0006F9C3 /* useful.m */; };
+		C9891ACD16A215920006F9C3 /* MeetingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9891ACC16A215920006F9C3 /* MeetingsViewController.m */; };
+		C9891AD016A215FA0006F9C3 /* ActionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9891ACF16A215FA0006F9C3 /* ActionsViewController.m */; };
+		C9891AD316A2165F0006F9C3 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9891AD216A2165F0006F9C3 /* TabBarViewController.m */; };
+		C9891AD616A216AE0006F9C3 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9891AD516A216AE0006F9C3 /* NavigationViewController.m */; };
+		C9891AD916A217510006F9C3 /* MeetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9891AD816A217510006F9C3 /* MeetingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +59,6 @@
 		C92189CB165C290800551523 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C92189CD165C290800551523 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C92189D0165C290800551523 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		C92189D2165C290800551523 /* MeetingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetingViewController.h; sourceTree = "<group>"; };
-		C92189D3165C290800551523 /* MeetingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetingViewController.m; sourceTree = "<group>"; };
 		C92189DA165C290900551523 /* MeetingNotesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetingNotesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92189DB165C290900551523 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C92189E3165C290900551523 /* MeetingNotesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MeetingNotesTests-Info.plist"; sourceTree = "<group>"; };
@@ -70,6 +73,18 @@
 		C94F1B0A168F79910068870E /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		C94F1B0C168FC0CE0068870E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		C94F1B0D168FC0CE0068870E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		C9891AC816A20ACA0006F9C3 /* useful.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = useful.h; sourceTree = "<group>"; };
+		C9891AC916A20ACA0006F9C3 /* useful.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = useful.m; sourceTree = "<group>"; };
+		C9891ACB16A215920006F9C3 /* MeetingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingsViewController.h; sourceTree = "<group>"; };
+		C9891ACC16A215920006F9C3 /* MeetingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingsViewController.m; sourceTree = "<group>"; };
+		C9891ACE16A215FA0006F9C3 /* ActionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionsViewController.h; sourceTree = "<group>"; };
+		C9891ACF16A215FA0006F9C3 /* ActionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionsViewController.m; sourceTree = "<group>"; };
+		C9891AD116A2165F0006F9C3 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		C9891AD216A2165F0006F9C3 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		C9891AD416A216AE0006F9C3 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		C9891AD516A216AE0006F9C3 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		C9891AD716A217510006F9C3 /* MeetingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingViewController.h; sourceTree = "<group>"; };
+		C9891AD816A217510006F9C3 /* MeetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,10 +149,20 @@
 				C92189CF165C290800551523 /* MainStoryboard.storyboard */,
 				C94F1B0C168FC0CE0068870E /* MainViewController.h */,
 				C94F1B0D168FC0CE0068870E /* MainViewController.m */,
-				C92189D2165C290800551523 /* MeetingViewController.h */,
-				C92189D3165C290800551523 /* MeetingViewController.m */,
 				C92189BE165C290800551523 /* Supporting Files */,
 				C9891AC616A207D80006F9C3 /* Model */,
+				C9891AC816A20ACA0006F9C3 /* useful.h */,
+				C9891AC916A20ACA0006F9C3 /* useful.m */,
+				C9891ACB16A215920006F9C3 /* MeetingsViewController.h */,
+				C9891ACC16A215920006F9C3 /* MeetingsViewController.m */,
+				C9891ACE16A215FA0006F9C3 /* ActionsViewController.h */,
+				C9891ACF16A215FA0006F9C3 /* ActionsViewController.m */,
+				C9891AD116A2165F0006F9C3 /* TabBarViewController.h */,
+				C9891AD216A2165F0006F9C3 /* TabBarViewController.m */,
+				C9891AD416A216AE0006F9C3 /* NavigationViewController.h */,
+				C9891AD516A216AE0006F9C3 /* NavigationViewController.m */,
+				C9891AD716A217510006F9C3 /* MeetingViewController.h */,
+				C9891AD816A217510006F9C3 /* MeetingViewController.m */,
 			);
 			path = MeetingNotes;
 			sourceTree = "<group>";
@@ -301,11 +326,16 @@
 			files = (
 				C92189C4165C290800551523 /* main.m in Sources */,
 				C92189C8165C290800551523 /* MeetingNotesAppDelegate.m in Sources */,
-				C92189D4165C290800551523 /* MeetingViewController.m in Sources */,
 				C94F1B05168F74790068870E /* Meeting.m in Sources */,
 				C94F1B08168F74AB0068870E /* Meetings.m in Sources */,
 				C94F1B0B168F79910068870E /* Note.m in Sources */,
 				C94F1B0E168FC0CE0068870E /* MainViewController.m in Sources */,
+				C9891ACA16A20ACA0006F9C3 /* useful.m in Sources */,
+				C9891ACD16A215920006F9C3 /* MeetingsViewController.m in Sources */,
+				C9891AD016A215FA0006F9C3 /* ActionsViewController.m in Sources */,
+				C9891AD316A2165F0006F9C3 /* TabBarViewController.m in Sources */,
+				C9891AD616A216AE0006F9C3 /* NavigationViewController.m in Sources */,
+				C9891AD916A217510006F9C3 /* MeetingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
