@@ -27,7 +27,6 @@
 		C94F1B08168F74AB0068870E /* Meetings.m in Sources */ = {isa = PBXBuildFile; fileRef = C94F1B07168F74AB0068870E /* Meetings.m */; };
 		C94F1B0B168F79910068870E /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = C94F1B0A168F79910068870E /* Note.m */; };
 		C94F1B0E168FC0CE0068870E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94F1B0D168FC0CE0068870E /* MainViewController.m */; };
-		C9891ACA16A20ACA0006F9C3 /* useful.m in Sources */ = {isa = PBXBuildFile; fileRef = C9891AC916A20ACA0006F9C3 /* useful.m */; };
 		C9891ACD16A215920006F9C3 /* MeetingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9891ACC16A215920006F9C3 /* MeetingsViewController.m */; };
 		C9891AD016A215FA0006F9C3 /* ActionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9891ACF16A215FA0006F9C3 /* ActionsViewController.m */; };
 		C9891AD316A2165F0006F9C3 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9891AD216A2165F0006F9C3 /* TabBarViewController.m */; };
@@ -76,8 +75,6 @@
 		C94F1B0A168F79910068870E /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		C94F1B0C168FC0CE0068870E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		C94F1B0D168FC0CE0068870E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		C9891AC816A20ACA0006F9C3 /* useful.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = useful.h; sourceTree = "<group>"; };
-		C9891AC916A20ACA0006F9C3 /* useful.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = useful.m; sourceTree = "<group>"; };
 		C9891ACB16A215920006F9C3 /* MeetingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingsViewController.h; sourceTree = "<group>"; };
 		C9891ACC16A215920006F9C3 /* MeetingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingsViewController.m; sourceTree = "<group>"; };
 		C9891ACE16A215FA0006F9C3 /* ActionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionsViewController.h; sourceTree = "<group>"; };
@@ -154,8 +151,6 @@
 				C94F1B0D168FC0CE0068870E /* MainViewController.m */,
 				C92189BE165C290800551523 /* Supporting Files */,
 				C9891AC616A207D80006F9C3 /* Model */,
-				C9891AC816A20ACA0006F9C3 /* useful.h */,
-				C9891AC916A20ACA0006F9C3 /* useful.m */,
 				C9891ACB16A215920006F9C3 /* MeetingsViewController.h */,
 				C9891ACC16A215920006F9C3 /* MeetingsViewController.m */,
 				C9891ACE16A215FA0006F9C3 /* ActionsViewController.h */,
@@ -335,7 +330,6 @@
 				C94F1B08168F74AB0068870E /* Meetings.m in Sources */,
 				C94F1B0B168F79910068870E /* Note.m in Sources */,
 				C94F1B0E168FC0CE0068870E /* MainViewController.m in Sources */,
-				C9891ACA16A20ACA0006F9C3 /* useful.m in Sources */,
 				C9891ACD16A215920006F9C3 /* MeetingsViewController.m in Sources */,
 				C9891AD016A215FA0006F9C3 /* ActionsViewController.m in Sources */,
 				C9891AD316A2165F0006F9C3 /* TabBarViewController.m in Sources */,
