@@ -22,6 +22,7 @@
 		C92189DE165C290900551523 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92189B9165C290800551523 /* Foundation.framework */; };
 		C92189E6165C290900551523 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C92189E4165C290900551523 /* InfoPlist.strings */; };
 		C92189E9165C290900551523 /* MeetingNotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C92189E8165C290900551523 /* MeetingNotesTests.m */; };
+		C942104316A30ABC005A3776 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C942104216A30ABC005A3776 /* NoteViewController.m */; };
 		C94F1B05168F74790068870E /* Meeting.m in Sources */ = {isa = PBXBuildFile; fileRef = C94F1B04168F74790068870E /* Meeting.m */; };
 		C94F1B08168F74AB0068870E /* Meetings.m in Sources */ = {isa = PBXBuildFile; fileRef = C94F1B07168F74AB0068870E /* Meetings.m */; };
 		C94F1B0B168F79910068870E /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = C94F1B0A168F79910068870E /* Note.m */; };
@@ -65,6 +66,8 @@
 		C92189E5165C290900551523 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C92189E7165C290900551523 /* MeetingNotesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetingNotesTests.h; sourceTree = "<group>"; };
 		C92189E8165C290900551523 /* MeetingNotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetingNotesTests.m; sourceTree = "<group>"; };
+		C942104116A30ABB005A3776 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
+		C942104216A30ABC005A3776 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
 		C94F1B03168F74790068870E /* Meeting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meeting.h; sourceTree = "<group>"; };
 		C94F1B04168F74790068870E /* Meeting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meeting.m; sourceTree = "<group>"; };
 		C94F1B06168F74AB0068870E /* Meetings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meetings.h; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				C9891AD516A216AE0006F9C3 /* NavigationViewController.m */,
 				C9891AD716A217510006F9C3 /* MeetingViewController.h */,
 				C9891AD816A217510006F9C3 /* MeetingViewController.m */,
+				C942104116A30ABB005A3776 /* NoteViewController.h */,
+				C942104216A30ABC005A3776 /* NoteViewController.m */,
 			);
 			path = MeetingNotes;
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 				C9891AD316A2165F0006F9C3 /* TabBarViewController.m in Sources */,
 				C9891AD616A216AE0006F9C3 /* NavigationViewController.m in Sources */,
 				C9891AD916A217510006F9C3 /* MeetingViewController.m in Sources */,
+				C942104316A30ABC005A3776 /* NoteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
