@@ -14,7 +14,7 @@
 
 @implementation MeetingViewController
 
-@synthesize modelIndex;
+@synthesize meeting;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
 	
-    self.title = [[NSString alloc] initWithFormat:@"Meeting %u", modelIndex];
+    self.title = [[NSString alloc] initWithFormat:@"%@", meeting.title];
 }
 
 - (void)didReceiveMemoryWarning

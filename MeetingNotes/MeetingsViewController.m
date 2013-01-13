@@ -9,6 +9,9 @@
 #import "MeetingsViewController.h"
 #import "MeetingViewController.h"
 
+#import "Note.h"
+#import "Meeting.h"
+
 @interface MeetingsViewController ()
 
 @end
@@ -29,8 +32,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    meetings = [[NSArray alloc] initWithObjects: @"meeting a", @"meeting b", @"meeting c", nil];
+    
+    Note *foo = [[Note alloc] init :@"foo" :Action];
+    Note *bar = [[Note alloc] init :@"bar" :Feedback];
+    
+    Meeting *meetingA = [[Meeting alloc] init :@"a meeting" :nil];
+    [meetingA addNote :foo];
+    [meetingA addNote :bar];
+    
+    Meeting *meetingB = [[Meeting alloc] init :@"b meeting" :nil];
+    [meetingB addNote :foo];
+    [meetingB addNote :bar];
+    
+    Meeting *meetingC = [[Meeting alloc] init :@"c meeting" :nil];
+    [meetingC addNote :foo];
+    [meetingC addNote :bar];
+    
+    meetings = [[NSArray alloc] initWithObjects: meetingA, meetingB, meetingC, nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,7 +83,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [meetings objectAtIndex:indexPath.row];
+    Meeting *meeting = [meetings objectAtIndex:indexPath.row];
+    NSString *meetingTitle = meeting.title;
+    cell.textLabel.text = meetingTitle;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
@@ -114,7 +134,8 @@
 {
     MeetingViewController *mvc = [segue destinationViewController];
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-    mvc.modelIndex = path.row;
+    int row = path.row;
+    mvc.meeting = [meetings objectAtIndex :row];
 }
 
 @end

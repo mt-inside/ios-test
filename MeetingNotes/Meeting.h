@@ -12,12 +12,15 @@
 
 @interface Meeting : NSObject
 {
-    NSString *_title;
-    NSDate   *_date;
+    NSString *title;
+    NSDate   *date;
     NSMutableArray *_notes;
 }
 
 -(id)init :(NSString *)title :(NSDate *)date;
+
+@property (readonly, copy) NSString *title;
+@property (readonly, copy) NSDate *date;
 
 -(void)addNote :(Note *)note;
 

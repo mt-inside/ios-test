@@ -18,14 +18,17 @@
             userInfo:          nil];
 }
 
--(id)init :(NSString *)title :(NSDate *)date
+-(id)init :(NSString *)initTitle :(NSDate *)initDate
 {
-    _title = title;
-    _date = date;
+    title = initTitle;
+    date = initDate;
     _notes = [[NSMutableArray alloc] init];
     
     return self;
 }
+
+@synthesize title;
+@synthesize date;
 
 -(void)addNote :(Note *)note
 {

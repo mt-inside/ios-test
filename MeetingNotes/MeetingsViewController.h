@@ -10,6 +10,6 @@
 
 @interface MeetingsViewController : UITableViewController
 
-@property (strong) NSArray *meetings;
+@property (strong) NSArray/*<Meeting *>*/ *meetings;
 
 @end
