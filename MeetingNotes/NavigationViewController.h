@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "Meetings.h"
+
 @interface NavigationViewController : UINavigationController
+
+@property (strong) Meetings *meetings;
 
 @end

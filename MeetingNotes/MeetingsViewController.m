@@ -9,9 +9,6 @@
 #import "MeetingsViewController.h"
 #import "MeetingViewController.h"
 
-#import "Note.h"
-#import "Meeting.h"
-
 @interface MeetingsViewController ()
 
 @end
@@ -32,23 +29,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    Note *foo = [[Note alloc] init :@"foo" :Action];
-    Note *bar = [[Note alloc] init :@"bar" :Feedback];
-    
-    Meeting *meetingA = [[Meeting alloc] init :@"a meeting" :nil];
-    [meetingA addNote :foo];
-    [meetingA addNote :bar];
-    
-    Meeting *meetingB = [[Meeting alloc] init :@"b meeting" :nil];
-    [meetingB addNote :foo];
-    [meetingB addNote :bar];
-    
-    Meeting *meetingC = [[Meeting alloc] init :@"c meeting" :nil];
-    [meetingC addNote :foo];
-    [meetingC addNote :bar];
-    
-    meetings = [[NSArray alloc] initWithObjects: meetingA, meetingB, meetingC, nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,7 +50,7 @@
 {
     // Return the number of rows in the section.
     // TODO: meetings / day
-    return meetings.count;
+    return meetings.meetings.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -83,7 +63,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    Meeting *meeting = [meetings objectAtIndex:indexPath.row];
+    Meeting *meeting = [meetings.meetings objectAtIndex:indexPath.row];
     NSString *meetingTitle = meeting.title;
     cell.textLabel.text = meetingTitle;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -135,7 +115,7 @@
     MeetingViewController *mvc = [segue destinationViewController];
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
     int row = path.row;
-    mvc.meeting = [meetings objectAtIndex :row];
+    mvc.meeting = [meetings.meetings objectAtIndex :row];
 }
 
 @end

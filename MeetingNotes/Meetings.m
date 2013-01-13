@@ -27,4 +27,23 @@
     return _meetings;
 }
 
+-(NSArray *)actions
+{
+    NSMutableArray *actions = [[NSMutableArray alloc] init];
+    
+    /* oh, for LINQ */
+    for( Meeting *m in _meetings )
+    {
+        for( Note *n in m.notes )
+        {
+            if( n.type == Action )
+            {
+                [actions addObject :n];
+            }
+        }
+    }
+    
+    return actions;
+}
+
 @end

@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TabBarViewController : UITabBarController
+#import "Meetings.h"
+
+@interface TabBarViewController : UITabBarController <UITabBarControllerDelegate>
+{
+    Meetings *_meetings;
+}
 
 @end

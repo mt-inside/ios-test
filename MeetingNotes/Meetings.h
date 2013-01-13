@@ -17,6 +17,7 @@
 }
 
 -(void)addMeeting :(Meeting *)meeting;
--(NSArray *)meetings;
+-(NSArray/*<Meeting *>*/ *)meetings;
+-(NSArray/*<Note *>*/ *)actions;
 
 @end

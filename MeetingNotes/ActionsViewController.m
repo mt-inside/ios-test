@@ -7,6 +7,7 @@
 //
 
 #import "ActionsViewController.h"
+#import "Note.h"
 
 @interface ActionsViewController ()
 
@@ -28,8 +29,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    actions = [[NSArray alloc] initWithObjects: @"action 1", @"action b", @"action c", nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,7 +61,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [actions objectAtIndex:indexPath.row];
+    Note *action = [actions objectAtIndex:indexPath.row];
+    cell.textLabel.text = action.text;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;

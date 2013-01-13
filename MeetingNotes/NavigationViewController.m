@@ -7,12 +7,15 @@
 //
 
 #import "NavigationViewController.h"
+#import "MeetingsViewController.h"
 
 @interface NavigationViewController ()
 
 @end
 
 @implementation NavigationViewController
+
+@synthesize meetings;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    ((MeetingsViewController *)[[self viewControllers] objectAtIndex:0]).meetings = meetings;
 }
 
 - (void)didReceiveMemoryWarning
