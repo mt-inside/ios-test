@@ -4,21 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--Meeting View Controller-->
-        <scene sceneID="SzI-Oh-zjS">
-            <objects>
-                <viewController id="31o-U9-HMh" customClass="MeetingViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="HNR-rt-3Ir">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="VWt-m6-WBF"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bcz-89-4zd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1472" y="-212"/>
-        </scene>
         <!--Meetings View Controller - Meetings-->
         <scene sceneID="Oj2-Pd-iQQ">
             <objects>
@@ -37,7 +22,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="31o-U9-HMh" kind="push" id="2kD-Dt-tmz"/>
+                                    <segue destination="SQs-1K-yg8" kind="push" id="boE-HA-9Dr"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -47,6 +32,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JcL-wS-ryU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="829" y="-218"/>
+        </scene>
+        <!--Meeting View Controller-->
+        <scene sceneID="59L-0d-IYE">
+            <objects>
+                <tableViewController id="SQs-1K-yg8" customClass="MeetingViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KiL-sr-HdX">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="5Cl-lF-hVe">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="z2B-7j-vE9" kind="push" id="TbR-2g-ouc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="SQs-1K-yg8" id="yoZ-nA-szc"/>
+                            <outlet property="delegate" destination="SQs-1K-yg8" id="lhB-tV-v9k"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="dgK-jX-SY6"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="liU-PA-Kq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1427" y="-211"/>
+        </scene>
+        <!--Note View Controller-->
+        <scene sceneID="dQy-kX-ekn">
+            <objects>
+                <viewController id="z2B-7j-vE9" customClass="NoteViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Co-1A-1RG">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="v2F-Rq-SKf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8b-xk-ObU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1934" y="-211"/>
         </scene>
         <!--Navigation View Controller - Meetings-->
         <scene sceneID="TpZ-ah-64r">
@@ -68,7 +101,7 @@
         <scene sceneID="Fc2-8z-a1J">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="cP8-og-KL4" customClass="TabBarViewController" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="YKY-CX-1gI">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -118,7 +151,7 @@
         <class className="ActionsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ActionsViewController.h"/>
         </class>
-        <class className="MeetingViewController" superclassName="UIViewController">
+        <class className="MeetingViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MeetingViewController.h"/>
         </class>
         <class className="MeetingsViewController" superclassName="UITableViewController">
@@ -126,6 +159,9 @@
         </class>
         <class className="NavigationViewController" superclassName="UINavigationController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NavigationViewController.h"/>
+        </class>
+        <class className="NoteViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NoteViewController.h"/>
         </class>
         <class className="TabBarViewController" superclassName="UITabBarController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TabBarViewController.h"/>

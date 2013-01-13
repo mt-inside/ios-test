@@ -14,13 +14,14 @@
 {
     NSString *title;
     NSDate   *date;
-    NSMutableArray *_notes;
+    NSMutableArray *notes;
 }
 
 -(id)init :(NSString *)title :(NSDate *)date;
 
 @property (readonly, copy) NSString *title;
 @property (readonly, copy) NSDate *date;
+@property (readonly, copy) NSArray *notes;
 
 -(void)addNote :(Note *)note;
 

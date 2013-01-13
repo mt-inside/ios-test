@@ -22,17 +22,18 @@
 {
     title = initTitle;
     date = initDate;
-    _notes = [[NSMutableArray alloc] init];
+    notes = [[NSMutableArray alloc] init];
     
     return self;
 }
 
 @synthesize title;
 @synthesize date;
+@synthesize notes;
 
 -(void)addNote :(Note *)note
 {
-    [_notes addObject :note];
+    [notes addObject :note];
 }
 
 -(NSAttributedString *)asAttributedString
@@ -41,7 +42,7 @@
     NSAttributedString *attributedNote;
     NSDictionary *attrs;
     
-    for (Note *note in _notes)
+    for (Note *note in notes)
     {
         NSString *substr = note.text;
         

@@ -10,7 +10,7 @@
 
 #import "Meeting.h"
 
-@interface MeetingViewController : UIViewController
+@interface MeetingViewController : UITableViewController
 
 /* I would really rather not have this mutable state here, but rather construct over the model to be rendered.
  However because I am using the storyboard to magically segue when a list iten is selected the new VC is already constructed by that point.
