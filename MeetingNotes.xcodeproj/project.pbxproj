@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9046BCC16B09BBC00C87912 /* InMemoryMeetingsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C9046BCB16B09BBC00C87912 /* InMemoryMeetingsFactory.m */; };
 		C92189B8165C290800551523 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92189B7165C290800551523 /* UIKit.framework */; };
 		C92189BA165C290800551523 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92189B9165C290800551523 /* Foundation.framework */; };
 		C92189BC165C290800551523 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92189BB165C290800551523 /* CoreGraphics.framework */; };
@@ -44,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9046BC816B09B6000C87912 /* IMeetingsFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMeetingsFactory.h; sourceTree = "<group>"; };
+		C9046BCA16B09BBC00C87912 /* InMemoryMeetingsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InMemoryMeetingsFactory.h; sourceTree = "<group>"; };
+		C9046BCB16B09BBC00C87912 /* InMemoryMeetingsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InMemoryMeetingsFactory.m; sourceTree = "<group>"; };
 		C92189B3165C290800551523 /* MeetingNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetingNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92189B7165C290800551523 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C92189B9165C290800551523 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -212,6 +216,9 @@
 				C94F1B06168F74AB0068870E /* Meetings.h */,
 				C94F1B07168F74AB0068870E /* Meetings.m */,
 				C94F1B04168F74790068870E /* Meeting.m */,
+				C9046BC816B09B6000C87912 /* IMeetingsFactory.h */,
+				C9046BCA16B09BBC00C87912 /* InMemoryMeetingsFactory.h */,
+				C9046BCB16B09BBC00C87912 /* InMemoryMeetingsFactory.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -338,6 +345,7 @@
 				C9891AD616A216AE0006F9C3 /* NavigationViewController.m in Sources */,
 				C9891AD916A217510006F9C3 /* MeetingViewController.m in Sources */,
 				C942104316A30ABC005A3776 /* NoteViewController.m in Sources */,
+				C9046BCC16B09BBC00C87912 /* InMemoryMeetingsFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
