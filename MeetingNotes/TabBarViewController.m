@@ -10,8 +10,8 @@
 #import "ActionsViewController.h"
 #import "NavigationViewController.h"
 
-#import "Meeting.h"
-#import "Note.h"
+#import "IMeetingsFactory.h"
+#import "InMemoryMeetingsFactory.h"
 
 @interface TabBarViewController ()
 
@@ -32,32 +32,10 @@
 {
     [super viewDidLoad];
     
+    id<IMeetingsFactory> factory = [[InMemoryMeetingsFactory alloc] init];
+    _meetings = [factory getMeetings];
+    
     self.delegate = self;
-    
-    /* This is somewhat akin to an entry point.
-     The whole data model is built here and passed through to the following viewControllers which display and edit subsets of it.
-     */
-    Note *foo = [[Note alloc] init :@"foo" :Action];
-    Note *bar = [[Note alloc] init :@"bar" :Feedback];
-    
-    Meeting *meetingA = [[Meeting alloc] init :@"a meeting" :nil];
-    [meetingA addNote :foo];
-    [meetingA addNote :bar];
-    
-    Meeting *meetingB = [[Meeting alloc] init :@"b meeting" :nil];
-    [meetingB addNote :foo];
-    [meetingB addNote :bar];
-    
-    Meeting *meetingC = [[Meeting alloc] init :@"c meeting" :nil];
-    [meetingC addNote :foo];
-    [meetingC addNote :bar];
-    
-    _meetings = [[Meetings alloc] init];
-    
-    [_meetings addMeeting: meetingA];
-    [_meetings addMeeting: meetingB];
-    [_meetings addMeeting: meetingC];
-    
     
     /* "bind" the model into the ViewContollers */
     for (UIViewController *vc in self.viewControllers)
