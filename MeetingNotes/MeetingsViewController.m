@@ -8,6 +8,7 @@
 
 #import "MeetingsViewController.h"
 #import "MeetingViewController.h"
+#import "MeetingMetadataViewController.h"
 
 @interface MeetingsViewController ()
 
@@ -29,13 +30,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    UIBarButtonItem *addMeetingButton = [[UIBarButtonItem alloc]
-                                            initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                            target:self
-                                            action:@selector(addButtonCallback)];
-    
-    self.navigationItem.rightBarButtonItem = addMeetingButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,13 +38,13 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)addButtonCallback
-{
+/*-(void)addButtonCallback
+{    
     Meeting *meeting = [[Meeting alloc] init:@"foobar" :[NSDate dateWithTimeIntervalSinceNow:0 ]];
     [meetings addMeeting:meeting];
     
     [self.tableView reloadData];
-}
+}*/
 
 #pragma mark - Table view data source
 
@@ -127,10 +121,19 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    MeetingViewController *mvc = [segue destinationViewController];
-    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-    int row = path.row;
-    mvc.meeting = [meetings.meetings objectAtIndex :row];
-}
+    UIViewController *vc = [segue destinationViewController];
+    
+    if( [vc isMemberOfClass:[MeetingViewController class]] )
+    {
+        MeetingViewController *mvc = (MeetingViewController *)vc;
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        int row = path.row;
+        mvc.meeting = [meetings.meetings objectAtIndex :row];
+    }
+    else if( [vc isMemberOfClass:[MeetingMetadataViewController class]] )
+    {
+        MeetingMetadataViewController *mmvc = (MeetingMetadataViewController *)vc;
 
+    }
+}
 @end

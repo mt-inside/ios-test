@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="cP8-og-KL4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="cP8-og-KL4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Meetings View Controller - Meetings-->
@@ -27,11 +27,90 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Meetings" id="y6Y-6H-FVd"/>
+                    <navigationItem key="navigationItem" title="Meetings" id="y6Y-6H-FVd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VLi-eV-Ihb">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <segue destination="zdE-9J-a6L" kind="modal" id="y3b-SR-TzM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JcL-wS-ryU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="829" y="-218"/>
+        </scene>
+        <!--Meeting Metadata View Controller-->
+        <scene sceneID="b5c-3Z-tFM">
+            <objects>
+                <viewController id="zdE-9J-a6L" customClass="MeetingMetadataViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KaV-zM-hf0">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5eA-US-dmw">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zdE-9J-a6L" id="8mq-Xh-bIF"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Meeting Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be3-EE-TbY">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZz-eH-9Ko">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="aye-xk-bf2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="zdE-9J-a6L" eventType="touchUpInside" id="fAB-0D-xKT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imx-Co-csz">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="6Pp-WO-sR1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="zdE-9J-a6L" eventType="touchUpInside" id="tsa-gL-6hr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cZz-eH-9Ko" firstAttribute="leading" secondItem="KaV-zM-hf0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0Od-kr-nbr"/>
+                            <constraint firstItem="be3-EE-TbY" firstAttribute="leading" secondItem="KaV-zM-hf0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="17N-I9-cgW"/>
+                            <constraint firstAttribute="trailing" secondItem="Imx-Co-csz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1rj-KF-7rx"/>
+                            <constraint firstAttribute="trailing" secondItem="be3-EE-TbY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="7d6-5y-OWY"/>
+                            <constraint firstItem="5eA-US-dmw" firstAttribute="leading" secondItem="KaV-zM-hf0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Cab-hW-H2R"/>
+                            <constraint firstItem="5eA-US-dmw" firstAttribute="top" secondItem="be3-EE-TbY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="H2H-QL-NIX"/>
+                            <constraint firstAttribute="trailing" secondItem="5eA-US-dmw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="V5a-1b-GNG"/>
+                            <constraint firstAttribute="bottom" secondItem="Imx-Co-csz" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="blZ-3j-hHK"/>
+                            <constraint firstAttribute="bottom" secondItem="cZz-eH-9Ko" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="lRN-9U-0eL"/>
+                            <constraint firstItem="be3-EE-TbY" firstAttribute="top" secondItem="KaV-zM-hf0" secondAttribute="top" constant="100" id="up4-0a-5xB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="meetingName" destination="5eA-US-dmw" id="sZd-tX-OlD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Vz-rx-GuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1427" y="-842"/>
         </scene>
         <!--Meeting View Controller-->
         <scene sceneID="59L-0d-IYE">
@@ -155,26 +234,6 @@
             <point key="canvasLocation" x="311" y="413"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="ActionsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActionsViewController.h"/>
-        </class>
-        <class className="MeetingViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MeetingViewController.h"/>
-        </class>
-        <class className="MeetingsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MeetingsViewController.h"/>
-        </class>
-        <class className="NavigationViewController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NavigationViewController.h"/>
-        </class>
-        <class className="NoteViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NoteViewController.h"/>
-        </class>
-        <class className="TabBarViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TabBarViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
