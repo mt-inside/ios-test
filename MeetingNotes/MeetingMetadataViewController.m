@@ -37,12 +37,12 @@
 
 - (IBAction)saveButtonPressed:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.delegate dismissPresentedViewController :[[Meeting alloc] init :self.meetingName.text :[NSDate dateWithTimeIntervalSinceNow:0]]];
 }
 
 - (IBAction)cancelButtonPressed:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.delegate dismissPresentedViewController :NULL];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField

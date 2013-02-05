@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 #import "Meetings.h"
+#import "MeetingMetadataViewController.h"
 
-@interface MeetingsViewController : UITableViewController
+@interface MeetingsViewController : UITableViewController <MeetingMetadataViewControllerDelegate>
 
 @property (strong) Meetings *meetings;
 

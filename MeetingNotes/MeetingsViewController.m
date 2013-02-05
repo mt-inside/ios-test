@@ -8,7 +8,6 @@
 
 #import "MeetingsViewController.h"
 #import "MeetingViewController.h"
-#import "MeetingMetadataViewController.h"
 
 @interface MeetingsViewController ()
 
@@ -37,14 +36,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*-(void)addButtonCallback
-{    
-    Meeting *meeting = [[Meeting alloc] init:@"foobar" :[NSDate dateWithTimeIntervalSinceNow:0 ]];
-    [meetings addMeeting:meeting];
-    
-    [self.tableView reloadData];
-}*/
 
 #pragma mark - Table view data source
 
@@ -133,7 +124,19 @@
     else if( [vc isMemberOfClass:[MeetingMetadataViewController class]] )
     {
         MeetingMetadataViewController *mmvc = (MeetingMetadataViewController *)vc;
+        mmvc.delegate = self;
+    }
+}
 
+- (void)dismissPresentedViewController :(Meeting *)meeting
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+    
+    if( meeting )
+    {
+        [meetings addMeeting:meeting];
+        
+        [self.tableView reloadData];
     }
 }
 @end
