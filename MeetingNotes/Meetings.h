@@ -13,11 +13,12 @@
 
 @interface Meetings : NSObject
 {
-    NSMutableArray *_meetings;
+    NSMutableArray *meetings;
 }
-//FIXME ordering and props
--(void)addMeeting :(Meeting *)meeting;
--(NSArray/*<Meeting *>*/ *)meetings;
+
+@property (readonly, copy) NSArray *meetings;
 -(NSArray/*<Note *>*/ *)actions;
+
+-(void)addMeeting :(Meeting *)meeting;
 
 @end

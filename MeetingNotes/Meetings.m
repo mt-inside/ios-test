@@ -12,27 +12,19 @@
 
 -(id)init
 {
-    _meetings = [[NSMutableArray alloc] init];
+    meetings = [[NSMutableArray alloc] init];
     
     return self;
 }
 
--(void)addMeeting :(Meeting *)meeting
-{
-    [_meetings addObject :meeting];
-}
-
--(NSArray *)meetings
-{
-    return _meetings;
-}
+@synthesize meetings;
 
 -(NSArray *)actions
 {
     NSMutableArray *actions = [[NSMutableArray alloc] init];
     
     /* oh, for LINQ */
-    for( Meeting *m in _meetings )
+    for( Meeting *m in meetings )
     {
         for( Note *n in m.notes )
         {
@@ -44,6 +36,11 @@
     }
     
     return actions;
+}
+
+-(void)addMeeting :(Meeting *)meeting
+{
+    [meetings addObject :meeting];
 }
 
 @end
