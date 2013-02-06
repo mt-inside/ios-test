@@ -29,13 +29,28 @@
 {
     [super viewDidLoad];
 	
-    self.title = [[NSString alloc] initWithFormat:@"%@", note.text];
+    if( note )
+    {
+        // Pre-existing Note to initialise using
+        self.title = note.text;
+        self.noteTextView.text = note.text;
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)willMoveToParentViewController:(UIViewController *)parent
+{
+    if( !parent )
+    {
+        // unloading
+        [note updateText :self.noteTextView.text];
+        [self.delegate dismissPresentedViewController :note];
+    }
 }
 
 @end

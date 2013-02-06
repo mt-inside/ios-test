@@ -29,4 +29,9 @@
 @synthesize text;
 @synthesize type;
 
+-(void)updateText:(NSString *)newText
+{
+    text = newText;
+}
+
 @end

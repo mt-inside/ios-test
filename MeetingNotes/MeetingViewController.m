@@ -7,7 +7,6 @@
 //
 
 #import "MeetingViewController.h"
-#import "NoteViewController.h"
 
 @interface MeetingViewController ()
 
@@ -142,10 +141,28 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NoteViewController *nvc = [segue destinationViewController];
-    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-    int row = path.row;
-    nvc.note = [meeting.notes objectAtIndex :row];
+    NoteViewController *nvc = segue.destinationViewController;
+    nvc.delegate = self;
+    
+    if( [sender isMemberOfClass:[UITableViewCell class]] )
+    {
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        int row = path.row;
+        nvc.note = [meeting.notes objectAtIndex :row];
+    }
+    else if( [sender isMemberOfClass:[UIBarButtonItem class]] )
+    {
+        Note *newNote = [[Note alloc] init :@"" :Action];
+        [meeting addNote :newNote];
+        nvc.note = newNote;
+    }
+}
+
+-(void) dismissPresentedViewController :(Note *)note
+{
+    // No actuall dismissal to be done; storyboard nav controller does that
+    
+    [self.tableView reloadData];
 }
 
 @end

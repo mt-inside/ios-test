@@ -28,4 +28,6 @@ typedef enum
 @property (readonly, copy) NSString *text;
 @property (readonly) NoteType type;
 
+-(void)updateText :(NSString *)newText;
+
 @end

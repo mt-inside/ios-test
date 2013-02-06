@@ -15,7 +15,7 @@
 {
     NSMutableArray *_meetings;
 }
-
+//FIXME ordering and props
 -(void)addMeeting :(Meeting *)meeting;
 -(NSArray/*<Meeting *>*/ *)meetings;
 -(NSArray/*<Note *>*/ *)actions;
