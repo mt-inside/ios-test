@@ -11,8 +11,7 @@
 #import "Meetings.h"
 
 @interface TabBarViewController : UITabBarController <UITabBarControllerDelegate>
-{
-    Meetings *_meetings;
-}
+
+@property (strong) Meetings *meetings;
 
 @end

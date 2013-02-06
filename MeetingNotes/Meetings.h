@@ -16,7 +16,8 @@
     NSMutableArray *meetings;
 }
 
-@property (readonly, copy) NSArray *meetings;
+/* TODO: lift actions and Meetings* meetings up to a new type, leaving NSArray meetings & addMeeting down here */
+@property (readonly) NSArray *meetings;
 -(NSArray/*<Note *>*/ *)actions;
 
 -(void)addMeeting :(Meeting *)meeting;

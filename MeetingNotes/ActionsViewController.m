@@ -15,7 +15,7 @@
 
 @implementation ActionsViewController
 
-@synthesize actions;
+@synthesize meetings;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,6 +37,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    // model may have changes under our feet
+    [self.tableView reloadData];
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -48,7 +53,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return actions.count;
+    return meetings.actions.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,7 +66,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    Note *action = [actions objectAtIndex:indexPath.row];
+    Note *action = [meetings.actions objectAtIndex:indexPath.row];
     cell.textLabel.text = action.text;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     

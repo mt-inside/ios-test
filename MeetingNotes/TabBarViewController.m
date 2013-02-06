@@ -19,6 +19,8 @@
 
 @implementation TabBarViewController
 
+@synthesize meetings;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,7 +35,7 @@
     [super viewDidLoad];
     
     id<IMeetingsFactory> factory = [[InMemoryMeetingsFactory alloc] init];
-    _meetings = [factory getMeetings];
+    meetings = [factory getMeetings];
     
     self.delegate = self;
     
@@ -43,12 +45,12 @@
         if( [vc isMemberOfClass:[ActionsViewController class]] )
         {
             ActionsViewController *avc = (ActionsViewController *)vc;
-            avc.actions = [_meetings actions];
+            avc.meetings = meetings;
         }
         else if( [vc isMemberOfClass:[NavigationViewController class]] )
         {
             NavigationViewController *nvc = (NavigationViewController *)vc;
-            nvc.meetings = _meetings;
+            nvc.meetings = meetings;
         }
     }
 }
